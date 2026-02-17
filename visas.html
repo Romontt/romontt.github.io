@@ -202,6 +202,19 @@ body {
 }
 
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const faqs = document.querySelectorAll('.faq-item h4');
+  faqs.forEach(faq => {
+    faq.addEventListener('click', () => {
+      const p = faq.nextElementSibling;
+      p.style.display = (p.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+});
+</script>
+
 </head>
 
 <body>
@@ -210,7 +223,7 @@ body {
 <section class="hero">
   <div class="hero-content">
     <h1>Asesoría Profesional de Visas</h1>
-    <p>Te apoyamos en todo el proceso de visas desde el inicio hasta la aprobación — rápido, claro y seguro.</p>
+    <p>Te apoyamos en todo el proceso de visas de turismo y tránsito de manera rápida y segura.</p>
     <a href="#services" class="btn-main">Ver Servicios</a>
   </div>
 </section>
@@ -224,22 +237,12 @@ body {
     <div class="service-card">
       <img src="https://img.icons8.com/ios-filled/100/0072ff/passport.png"/>
       <h3>Visa Turística</h3>
-      <p>Asesoría completa para visas de turismo y paseo.</p>
+      <p>Asesoría completa para visas de turismo, desde la preparación hasta la entrega.</p>
     </div>
     <div class="service-card">
       <img src="https://img.icons8.com/ios-filled/100/0072ff/passport-opened.png"/>
-      <h3>Visa de Negocios</h3>
-      <p>Te guiamos paso a paso para visas de negocios y tránsito.</p>
-    </div>
-    <div class="service-card">
-      <img src="https://img.icons8.com/ios-filled/100/0072ff/file.png"/>
-      <h3>Formularios DS‑160</h3>
-      <p>Completamos y revisamos tu formulario para asegurar aprobación.</p>
-    </div>
-    <div class="service-card">
-      <img src="https://img.icons8.com/ios-filled/100/0072ff/clock.png"/>
-      <h3>Citas Express</h3>
-      <p>Agendamos citas en tiempo récord según disponibilidad.</p>
+      <h3>Visa de Tránsito</h3>
+      <p>Te guiamos en el proceso de visas de tránsito sin complicaciones.</p>
     </div>
   </div>
 </section>
@@ -269,12 +272,16 @@ body {
   <h2 style="text-align:center; font-size:32px; font-weight:700; margin-bottom:25px;">Lo Que Dicen Nuestros Clientes</h2>
   <div class="testimonials">
     <div class="testimonial-card">
-      <p>"El servicio fue excelente y me ayudaron a preparar todo rápido y sin estrés."</p>
-      <div class="name">— Ana G.</div>
+      <p>"Excelente servicio, me ayudaron a obtener mi visa sin estrés."</p>
+      <div class="name">— Juan M.</div>
     </div>
     <div class="testimonial-card">
-      <p>"Gracias a MontZu CR aprobé mi visa sin problemas. Muy recomendado."</p>
-      <div class="name">— Carlos T.</div>
+      <p>"MontZu CR me acompañó paso a paso. Muy recomendado."</p>
+      <div class="name">— Laura P.</div>
+    </div>
+    <div class="testimonial-card">
+      <p>"Rápido, seguro y con mucha claridad en la información. ¡Gracias!"</p>
+      <div class="name">— Diego R.</div>
     </div>
   </div>
 </section>
@@ -300,6 +307,7 @@ body {
 <section id="contact" class="section">
   <h2 style="text-align:center; font-size:32px; font-weight:700; margin-bottom:20px;">Solicita Tu Asesoría</h2>
   <p style="text-align:center; margin-bottom:25px; opacity:0.9;">Completa el formulario o contáctanos directamente por WhatsApp.</p>
+  
 
   <div style="text-align:center;">
     <a href="https://wa.me/50661961136" class="btn-main">Contactar por WhatsApp</a>
