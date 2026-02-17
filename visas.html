@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MontZu CR | Servicios de Visas</title>
+<title>MontZu CR | Asesoría de Visas</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 /* GENERAL */
@@ -12,106 +12,118 @@ body {
   font-family: 'Poppins', Arial, sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
+  scroll-behavior: smooth;
 }
 
 /* HERO */
 .hero-visas {
+  position: relative;
   text-align: center;
-  padding: 80px 20px 60px 20px;
+  padding: 120px 20px 80px 20px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1582719478250-4e2e5d2c0d3e?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
 }
 
 .hero-visas h1 {
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
 }
 
 .hero-visas p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   opacity: 0.9;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .hero-visas .btn-main {
   background: linear-gradient(90deg, #00c6ff, #0072ff);
-  padding: 14px 30px;
-  border-radius: 12px;
+  padding: 16px 40px;
+  border-radius: 50px;
   color: white;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  font-size: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-visas .btn-main:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 45px rgba(0,0,0,0.5);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
 }
 
 /* PASOS DEL PROCESO */
 .steps {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 50px;
-  justify-content: center;
 }
 
 .step-card {
-  background: white;
-  color: #333;
-  width: 300px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  color: white;
   padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .step-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
 }
 
 .step-card h3 {
   font-size: 22px;
   margin-bottom: 12px;
+  font-weight: 700;
 }
 
 .step-card p {
   font-size: 16px;
   line-height: 1.5;
+  opacity: 0.9;
 }
 
 /* FAQ */
 .faq-section {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .faq-section h2 {
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 30px;
+  font-size: 36px;
+  margin-bottom: 35px;
 }
 
 .faq-item {
   background: rgba(255,255,255,0.1);
-  padding: 20px;
+  backdrop-filter: blur(10px);
+  padding: 20px 25px;
   margin-bottom: 15px;
-  border-radius: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+  background: rgba(255,255,255,0.15);
 }
 
 .faq-item h4 {
   margin: 0;
-  cursor: pointer;
 }
 
 .faq-item p {
@@ -122,19 +134,22 @@ body {
   opacity: 0.9;
 }
 
-/* FORMULARIO */
+/* FORMULARIO / CONTACTO */
 .contact-section {
-  margin-top: 60px;
+  margin-top: 70px;
   text-align: center;
+  padding: 50px 20px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 30px;
 }
 
 .contact-section h2 {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 20px;
 }
 
 .contact-section p {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 25px;
   opacity: 0.9;
 }
@@ -161,9 +176,17 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .hero-visas h1 {
+    font-size: 36px;
+  }
+  .hero-visas p {
+    font-size: 18px;
+  }
+  .contact-section h2 {
+    font-size: 28px;
+  }
   .steps {
-    flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
 }
 </style>
@@ -179,13 +202,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-
 </head>
 <body>
 
+<!-- HERO -->
 <section class="hero-visas">
   <h1>Asesoría Profesional de Visas</h1>
-  <p>En MontZu CR te acompañamos en cada paso del proceso de solicitud de visa. Rápido, seguro y confiable, con atención personalizada según tu tipo de visa y destino.</p>
+  <p>MontZu CR te acompaña en todo el proceso de solicitud de visa de manera segura y confiable. Atención personalizada según tu tipo de visa y destino.</p>
   <a href="#contact-form" class="btn-main">Iniciar Solicitud</a>
 </section>
 
@@ -228,13 +251,13 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
   </div>
 
-  <!-- FORMULARIO DE CONTACTO / WHATSAPP -->
+  <!-- FORMULARIO / CONTACTO -->
   <div class="contact-section" id="contact-form">
     <h2>Solicita Tu Asesoría</h2>
     <p>Completa el formulario o haz clic en el botón de WhatsApp para recibir atención personalizada.</p>
     <a href="https://wa.me/50661961136" class="btn-main">Contactar por WhatsApp</a>
     <!-- Aquí se puede agregar el iframe del formulario CRM si se quiere -->
-    <!-- <iframe src="https://crm.costaricacrm.com/viajaconpri/c/formulario-contacto-vp" width="100%" height="1200px" frameborder="0" style="border:2px solid #ddd; border-radius:8px; margin-top:20px;"></iframe> -->
+    <!-- <iframe src="https://crm.costaricacrm.com/viajaconpri/c/formulario-contacto-vp" width="100%" height="1200px" frameborder="0" style="border:2px solid #ddd; border-radius:20px; margin-top:20px;"></iframe> -->
   </div>
 
 </div>
