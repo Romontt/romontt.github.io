@@ -27,61 +27,45 @@ background: linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
 color:white;
 }
 
-/* NAVBAR MAS COMPACTA */
+/* NAVBAR */
 
 .navbar{
-
 position:fixed;
 top:0;
 width:100%;
-
-/* ALTURA FIJA PROFESIONAL */
 height:85px;
-
-/* REDUCCION IMPORTANTE */
 padding:10px 40px;
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 background:rgba(15,23,42,0.75);
 backdrop-filter: blur(12px);
-
 border-bottom:1px solid rgba(255,255,255,0.1);
-
 z-index:1000;
-
 transition:all 0.35s ease;
 }
 
-/* EFECTO SCROLL */
-
 .navbar.scrolled{
-
 background:rgba(15,23,42,0.95);
-
 box-shadow:0 10px 30px rgba(0,0,0,0.6);
-
 border-bottom:1px solid rgba(56,189,248,0.3);
-
 }
 
-/* LOGO */
+/* LOGO CONTENEDOR */
 
 .logo{
 display:flex;
 align-items:center;
-gap:12px;
+gap:0;
+position:relative;
 }
 
-.logo img{
+/* IMAGEN LOGO */
 
-/* CONTROL REAL DE ALTURA */
+.logo img{
 height:80px;
 width:auto;
 display:block;
-
 transition:0.3s;
 }
 
@@ -89,20 +73,23 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* TEXTO LOGO */
+/* TEXTO LOGO PREMIUM */
 
 .logo-text{
 
 font-family:'Satisfy', cursive;
-
-font-size:26px;
-
+font-size:28px;
 font-weight:bold;
 
-background: linear-gradient(90deg,#60a5fa,#38bdf8,#0ea5e9);
+margin-left:-12px; /* superpone el texto sobre el logo */
 
+letter-spacing:0.5px;
+
+background: linear-gradient(90deg,#60a5fa,#38bdf8,#0ea5e9);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+
+text-shadow:0 0 12px rgba(56,189,248,0.25);
 
 }
 
@@ -156,11 +143,8 @@ cursor:pointer;
 /* HERO */
 
 .hero{
-
-margin-top:85px; /* AJUSTADO AL NUEVO NAVBAR */
-
+margin-top:85px;
 min-height:45vh;
-
 display:flex;
 align-items:center;
 justify-content:center;
@@ -189,17 +173,14 @@ text-shadow:0 0 15px rgba(0,0,0,0.6);
 /* SECTIONS */
 
 .section{
-
 padding:70px 20px;
 text-align:center;
-
 opacity:0;
 transform:translateY(40px);
 transition:all 0.8s ease;
 }
 
 .section.visible{
-
 opacity:1;
 transform:translateY(0);
 }
@@ -266,16 +247,16 @@ opacity:0.7;
 @media(max-width:768px){
 
 .navbar{
-height:85px;
 padding:10px 20px;
 }
 
 .logo img{
-height:80px;
+height:70px;
 }
 
 .logo-text{
-font-size:22px;
+font-size:24px;
+margin-left:-10px;
 }
 
 .hamburger{
@@ -283,22 +264,15 @@ display:block;
 }
 
 .nav-right{
-
 position:absolute;
-top:60px;
-
+top:85px;
 right:0;
-
 background:rgba(15,23,42,0.98);
-
 width:100%;
-
 flex-direction:column;
 align-items:center;
-
 gap:20px;
 padding:20px;
-
 display:none;
 }
 
@@ -308,7 +282,6 @@ display:flex;
 
 .hero{
 min-height:40vh;
-margin-top:75px;
 }
 
 .hero-text{
@@ -360,10 +333,8 @@ Solicitar Asesoría
 <div class="hero-content">
 
 <div class="hero-text">
-
 Asesoría profesional para visas de turista y tránsito a Estados Unidos.  
 Proceso guiado, claro y confiable.
-
 </div>
 
 </div>
