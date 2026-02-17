@@ -1,189 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MontZu CR | Asesoría de Visas</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 /* GENERAL */
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
-  color: #fff;
   scroll-behavior: smooth;
-  background: #0f2027;
-}
-
-/* HERO */
-.hero-visas {
-  position: relative;
-  text-align: center;
-  padding: 140px 20px 100px 20px;
-  background: url('https://images.unsplash.com/photo-1582719478250-4e2e5d2c0d3e?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  top:0; left:0; width:100%; height:100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: auto;
-}
-
-.hero-content h1 {
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
-}
-
-.hero-content p {
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 35px;
-  opacity: 0.9;
-}
-
-.btn-main {
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  padding: 16px 40px;
-  border-radius: 50px;
-  color: white;
-  font-weight: 600;
-  font-size: 18px;
-  text-decoration: none;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.5);
-  transition: all 0.4s ease;
-}
-
-.btn-main:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 50px rgba(0,0,0,0.6);
-}
-
-/* SEPARADOR CURVO */
-.section-divider {
-  width: 100%;
-  height: 80px;
-  background: #0f2027;
-  border-top-left-radius: 50% 20%;
-  border-top-right-radius: 50% 20%;
-  margin-top: -40px;
-}
-
-/* CONTAINER */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-/* PASOS DEL PROCESO */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: -40px;
-}
-
-.step-card {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(12px);
-  color: white;
-  padding: 30px;
-  border-radius: 30px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-  text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: default;
-}
-
-.step-card:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-}
-
-.step-card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.step-card p {
-  font-size: 16px;
-  line-height: 1.5;
-  opacity: 0.9;
-}
-
-/* FAQ */
-.faq-section {
-  margin-top: 80px;
-  padding: 50px 20px;
-  background: linear-gradient(120deg, #0072ff, #00c6ff);
-  border-radius: 40px;
-}
-
-.faq-section h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: white;
-}
-
-.faq-item {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  padding: 20px 25px;
-  margin-bottom: 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.faq-item:hover {
-  background: rgba(255,255,255,0.15);
-  transform: translateY(-5px);
-}
-
-.faq-item h4 {
-  margin: 0;
-  font-weight: 600;
-}
-
-.faq-item p {
-  margin-top: 10px;
-  display: none;
-  font-size: 15px;
-  line-height: 1.5;
-  opacity: 0.95;
-}
-
-/* CONTACTO */
-.contact-section {
-  margin-top: 80px;
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #0f2027, #203a43);
-  border-radius: 40px;
-}
-
-.contact-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.contact-section p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  opacity: 0.9;
+  color: #333;
 }
 
 /* BOTON WHATSAPP FIJO */
@@ -197,107 +29,282 @@ body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
 }
-
 .whatsapp:hover {
   transform: scale(1.1);
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
 }
 
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 130px 20px 90px 20px;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: auto;
+}
+.hero-content h1 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.hero-content p {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+.btn-main {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  padding: 16px 38px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.btn-main:hover {
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* DIVIDER */
+.divider {
+  height: 50px;
+  background: #f5f5f5;
+}
+
+/* SERVICIOS */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+.service-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+.service-card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* WHY CHOOSE US */
+.choose-us {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+.choose-us .text {
+  flex: 1;
+}
+.choose-us .reasons {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.reason-card {
+  background: #0072ff;
+  color: white;
+  padding: 18px;
+  border-radius: 15px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* TESTIMONIOS */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.testimonial-card {
+  background: white;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.testimonial-card p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+.testimonial-card .name {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* FAQ */
+.faq-item {
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.faq-item h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.faq-item p {
+  margin-top: 10px;
+  display: none;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 36px;
-  }
-  .hero-content p {
-    font-size: 18px;
-  }
-  .contact-section h2 {
-    font-size: 28px;
-  }
-  .steps {
-    gap: 20px;
-  }
+  .hero-content h1 { font-size: 36px; }
+  .choose-us { flex-direction: column; }
 }
-</style>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const faqs = document.querySelectorAll('.faq-item h4');
-  faqs.forEach(faq => {
-    faq.addEventListener('click', () => {
-      const p = faq.nextElementSibling;
-      p.style.display = (p.style.display === 'block') ? 'none' : 'block';
-    });
-  });
-});
-</script>
+</style>
 </head>
+
 <body>
 
 <!-- HERO -->
-<section class="hero-visas">
-  <div class="hero-overlay"></div>
+<section class="hero">
   <div class="hero-content">
     <h1>Asesoría Profesional de Visas</h1>
-    <p>MontZu CR te acompaña en todo el proceso de solicitud de visa de manera segura y confiable. Atención personalizada según tu tipo de visa y destino.</p>
-    <a href="#contact-form" class="btn-main">Iniciar Solicitud</a>
+    <p>Te apoyamos en todo el proceso de visas desde el inicio hasta la aprobación — rápido, claro y seguro.</p>
+    <a href="#services" class="btn-main">Ver Servicios</a>
   </div>
 </section>
 
-<div class="section-divider"></div>
+<div class="divider"></div>
 
-<div class="container">
-
-  <!-- PASOS DEL PROCESO -->
-  <div class="steps">
-    <div class="step-card">
-      <h3>1. Consulta Inicial</h3>
-      <p>Analizamos tu caso y te explicamos qué tipo de visa aplica para ti.</p>
+<!-- SERVICIOS -->
+<section id="services" class="section">
+  <h2 style="text-align:center; font-size:32px; font-weight:700; margin-bottom:25px;">Nuestros Servicios</h2>
+  <div class="services">
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/100/0072ff/passport.png"/>
+      <h3>Visa Turística</h3>
+      <p>Asesoría completa para visas de turismo y paseo.</p>
     </div>
-    <div class="step-card">
-      <h3>2. Preparación de Documentos</h3>
-      <p>Te guiamos para reunir todos los documentos necesarios correctamente.</p>
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/100/0072ff/passport-opened.png"/>
+      <h3>Visa de Negocios</h3>
+      <p>Te guiamos paso a paso para visas de negocios y tránsito.</p>
     </div>
-    <div class="step-card">
-      <h3>3. Envío y Seguimiento</h3>
-      <p>Nos encargamos del envío de tu solicitud y te informamos cada avance.</p>
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/100/0072ff/file.png"/>
+      <h3>Formularios DS‑160</h3>
+      <p>Completamos y revisamos tu formulario para asegurar aprobación.</p>
     </div>
-    <div class="step-card">
-      <h3>4. Resultados y Entrega</h3>
-      <p>Recibes tu visa y te orientamos para los próximos pasos si es necesario.</p>
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/100/0072ff/clock.png"/>
+      <h3>Citas Express</h3>
+      <p>Agendamos citas en tiempo récord según disponibilidad.</p>
     </div>
   </div>
+</section>
 
-  <!-- FAQ -->
-  <div class="faq-section">
-    <h2>Preguntas Frecuentes</h2>
-    <div class="faq-item">
-      <h4>¿Cuánto tiempo tarda el proceso de visa?</h4>
-      <p>El tiempo depende del tipo de visa y del país, normalmente entre 15 a 45 días hábiles.</p>
+<div class="divider"></div>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="section" style="background:#f5f5f5;">
+  <h2 style="text-align:center; font-size:32px; font-weight:700; margin-bottom:25px;">¿Por Qué Elegir MontZu CR?</h2>
+  <div class="choose-us">
+    <div class="text">
+      <p>Somos especialistas en trámites de visas con años de experiencia, comunicación clara y apoyo en cada paso del proceso. Tu tranquilidad es nuestra prioridad.</p>
     </div>
-    <div class="faq-item">
-      <h4>¿Necesito algún documento adicional?</h4>
-      <p>Te indicaremos exactamente qué documentos debes presentar según tu caso particular.</p>
-    </div>
-    <div class="faq-item">
-      <h4>¿Pueden ayudarme si ya tengo la cita programada?</h4>
-      <p>Sí, podemos revisar tu preparación y darte asesoría para que tu solicitud sea correcta.</p>
+    <div class="reasons">
+      <div class="reason-card">Experiencia Profesional</div>
+      <div class="reason-card">Atención Personalizada</div>
+      <div class="reason-card">Comunicación Clara</div>
+      <div class="reason-card">Seguimiento Constante</div>
     </div>
   </div>
+</section>
 
-  <!-- FORMULARIO / CONTACTO -->
-  <div class="contact-section" id="contact-form">
-    <h2>Solicita Tu Asesoría</h2>
-    <p>Completa el formulario o haz clic en el botón de WhatsApp para recibir atención personalizada.</p>
+<div class="divider"></div>
+
+<!-- TESTIMONIOS -->
+<section class="section">
+  <h2 style="text-align:center; font-size:32px; font-weight:700; margin-bottom:25px;">Lo Que Dicen Nuestros Clientes</h2>
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <p>"El servicio fue excelente y me ayudaron a preparar todo rápido y sin estrés."</p>
+      <div class="name">— Ana G.</div>
+    </div>
+    <div class="testimonial-card">
+      <p>"Gracias a MontZu CR aprobé mi visa sin problemas. Muy recomendado."</p>
+      <div class="name">— Carlos T.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section class="section" style="background:#f5f5f5;">
+  <h2 style="text-align:center; font-size:32px; font-weight:700; margin-bottom:25px;">Preguntas Frecuentes</h2>
+  <div class="faq-item">
+    <h4>¿Cuánto tarda el proceso?</h4>
+    <p>Depende del tipo de visa, normalmente entre 15 y 45 días hábiles.</p>
+  </div>
+  <div class="faq-item">
+    <h4>¿Qué documentos necesito?</h4>
+    <p>Te indicamos lo necesario según tu caso para evitar rechazos.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACTO -->
+<section id="contact" class="section">
+  <h2 style="text-align:center; font-size:32px; font-weight:700; margin-bottom:20px;">Solicita Tu Asesoría</h2>
+  <p style="text-align:center; margin-bottom:25px; opacity:0.9;">Completa el formulario o contáctanos directamente por WhatsApp.</p>
+
+  <div style="text-align:center;">
     <a href="https://wa.me/50661961136" class="btn-main">Contactar por WhatsApp</a>
-    <!-- Aquí se puede agregar el iframe del formulario CRM -->
-    <!-- <iframe src="https://crm.costaricacrm.com/viajaconpri/c/formulario-contacto-vp" width="100%" height="1200px" frameborder="0" style="border:2px solid #ddd; border-radius:20px; margin-top:20px;"></iframe> -->
   </div>
-
-</div>
+</section>
 
 <a href="https://wa.me/50661961136" class="whatsapp">WhatsApp</a>
 
