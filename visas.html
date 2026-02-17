@@ -6,10 +6,7 @@
 
 <title>Visas MontZu | Asesoría Profesional</title>
 
-<!-- FUENTE PROFESIONAL -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-
-<!-- FUENTE SATISFY -->
 <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 
 <style>
@@ -30,14 +27,16 @@ background: linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
 color:white;
 }
 
-/* NAVBAR */
+/* NAVBAR MAS COMPACTA */
 
 .navbar{
 
 position:fixed;
 top:0;
 width:100%;
-padding:4px 40px; /* NAVBAR MAS PEQUEÑA */
+
+/* REDUCCION IMPORTANTE */
+padding:2px 40px;
 
 display:flex;
 justify-content:space-between;
@@ -53,7 +52,7 @@ z-index:1000;
 transition:all 0.35s ease;
 }
 
-/* PREMIUM EFFECT ON SCROLL */
+/* EFECTO SCROLL */
 
 .navbar.scrolled{
 
@@ -70,7 +69,7 @@ border-bottom:1px solid rgba(56,189,248,0.3);
 .logo{
 display:flex;
 align-items:center;
-gap:15px;
+gap:12px;
 }
 
 .logo img{
@@ -83,17 +82,15 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* TEXTO LOGO CON SATISFY */
+/* TEXTO LOGO */
 
 .logo-text{
 
 font-family:'Satisfy', cursive;
 
-font-size:28px;
+font-size:26px;
 
 font-weight:bold;
-
-letter-spacing:0.5px;
 
 background: linear-gradient(90deg,#60a5fa,#38bdf8,#0ea5e9);
 
@@ -107,7 +104,7 @@ background: linear-gradient(90deg,#60a5fa,#38bdf8,#0ea5e9);
 .nav-right{
 display:flex;
 align-items:center;
-gap:30px;
+gap:22px;
 }
 
 .nav-right a{
@@ -116,6 +113,7 @@ text-decoration:none;
 font-weight:500;
 opacity:0.9;
 transition:0.3s;
+font-size:15px;
 }
 
 .nav-right a:hover{
@@ -126,12 +124,13 @@ color:#38bdf8;
 
 .nav-btn{
 background: linear-gradient(90deg,#2563eb,#38bdf8);
-padding:10px 22px;
+padding:7px 18px; /* MAS PEQUEÑO */
 border-radius:8px;
 color:white;
 text-decoration:none;
 font-weight:bold;
 transition:0.3s;
+font-size:14px;
 }
 
 .nav-btn:hover{
@@ -143,7 +142,7 @@ box-shadow:0 0 15px rgba(56,189,248,0.6);
 
 .hamburger{
 display:none;
-font-size:30px;
+font-size:26px;
 cursor:pointer;
 }
 
@@ -151,7 +150,8 @@ cursor:pointer;
 
 .hero{
 
-margin-top:120px;
+margin-top:95px; /* AJUSTADO A NAVBAR MAS PEQUEÑA */
+
 min-height:45vh;
 
 display:flex;
@@ -273,7 +273,8 @@ display:block;
 .nav-right{
 
 position:absolute;
-top:70px;
+top:60px;
+
 right:0;
 
 background:rgba(15,23,42,0.98);
@@ -295,7 +296,7 @@ display:flex;
 
 .hero{
 min-height:40vh;
-margin-top:100px;
+margin-top:90px;
 }
 
 .hero-text{
