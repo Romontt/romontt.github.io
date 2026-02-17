@@ -35,6 +35,9 @@ position:fixed;
 top:0;
 width:100%;
 
+/* ALTURA FIJA PROFESIONAL */
+height:65px;
+
 /* REDUCCION IMPORTANTE */
 padding:2px 40px;
 
@@ -73,8 +76,12 @@ gap:12px;
 }
 
 .logo img{
-width:160px;
-max-width:45vw;
+
+/* CONTROL REAL DE ALTURA */
+height:55px;
+width:auto;
+display:block;
+
 transition:0.3s;
 }
 
@@ -124,7 +131,7 @@ color:#38bdf8;
 
 .nav-btn{
 background: linear-gradient(90deg,#2563eb,#38bdf8);
-padding:7px 18px; /* MAS PEQUEÑO */
+padding:7px 18px;
 border-radius:8px;
 color:white;
 text-decoration:none;
@@ -150,7 +157,7 @@ cursor:pointer;
 
 .hero{
 
-margin-top:95px; /* AJUSTADO A NAVBAR MAS PEQUEÑA */
+margin-top:85px; /* AJUSTADO AL NUEVO NAVBAR */
 
 min-height:45vh;
 
@@ -258,8 +265,13 @@ opacity:0.7;
 
 @media(max-width:768px){
 
+.navbar{
+height:60px;
+padding:2px 20px;
+}
+
 .logo img{
-width:120px;
+height:45px;
 }
 
 .logo-text{
@@ -296,7 +308,7 @@ display:flex;
 
 .hero{
 min-height:40vh;
-margin-top:90px;
+margin-top:75px;
 }
 
 .hero-text{
