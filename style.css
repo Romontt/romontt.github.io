@@ -1,9 +1,10 @@
 :root {
-    --bg-main: #0a0b10;       /* Negro profundidad */
-    --card-bg: #14171f;       /* Gris carbón profesional */
-    --gold: #D4AF37;          /* Dorado Montzu */
+    --bg-main: #0a0b10;
+    --card-bg: #14171f;
+    --gold: #D4AF37;
     --text-light: #f0f0f0;
     --text-dim: #9aa0a6;
+    --border: rgba(255, 255, 255, 0.05);
 }
 
 * {
@@ -17,16 +18,16 @@ body {
     background: radial-gradient(circle at top, #1a202c 0%, var(--bg-main) 100%);
     color: var(--text-light);
     font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* Cambiado para permitir scroll ahora que hay más contenido */
+    display: block; 
     min-height: 100vh;
 }
 
 .main-content {
     width: 100%;
     max-width: 1200px;
-    padding: 40px 20px;
+    padding: 80px 20px;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -51,18 +52,17 @@ body {
     margin-bottom: 60px;
 }
 
-/* --- GRILLA: AQUÍ ARREGLAMOS LA ESTRUCTURA --- */
+/* --- GRILLA DE SERVICIOS --- */
 .services-grid {
     display: grid;
-    /* Esto obliga a tener 3 columnas de igual tamaño */
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .card {
     background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
     padding: 45px 30px;
     border-radius: 12px;
     display: flex;
@@ -77,7 +77,6 @@ body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo para la tarjeta de Punto 506 (Destacada) */
 .card.featured {
     border-bottom: 3px solid var(--gold);
 }
@@ -98,10 +97,10 @@ body {
     font-size: 0.9rem;
     margin-bottom: 25px;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-/* --- BOTONES --- */
+/* --- BOTONES Y BADGES --- */
 .btn {
     display: block;
     padding: 12px;
@@ -130,12 +129,114 @@ body {
     display: block;
 }
 
-/* --- RESPONSIVO PARA CELULARES --- */
+/* --- SECCIÓN SOBRE NOSOTROS --- */
+.about-section {
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+    margin-bottom: 60px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.about-section p {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* --- FOOTER PRO --- */
+.main-footer {
+    background: #07080c;
+    border-top: 1px solid var(--border);
+    padding: 80px 20px 40px;
+    text-align: left;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.footer-logo span { color: var(--gold); }
+
+.footer-col p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    max-width: 300px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.footer-col ul { list-style: none; }
+
+.footer-col ul li { margin-bottom: 12px; }
+
+.footer-col ul li a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-col ul li a:hover { color: var(--gold); }
+
+.footer-mail {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: #444;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVO --- */
 @media (max-width: 900px) {
-    .services-grid {
-        grid-template-columns: 1fr; /* Una sola columna en móvil */
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    .services-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto 100px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .footer-col p { margin: 0 auto; }
+    .logo-text { font-size: 2.5rem; letter-spacing: 5px; }
 }
