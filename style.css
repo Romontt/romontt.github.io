@@ -43,28 +43,29 @@ body {
 .card:nth-child(2) { animation-delay: 0.2s; }
 .card:nth-child(3) { animation-delay: 0.3s; }
 
-/* --- NAVBAR (Extendido a las orillas) --- */
+/* --- NAVBAR (Extensión Total de Elementos) --- */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0; /* Asegura que toque ambos bordes */
     width: 100%; 
     height: var(--nav-height);
-    background: rgba(10, 11, 16, 0.9); /* Más opaco para notar la extensión */
+    background: rgba(10, 11, 16, 0.9);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
     display: flex;
-    justify-content: center; /* Centra el contenedor interno */
+    justify-content: center;
 }
 
 .nav-container {
     width: 100%;
-    max-width: 1000px; /* Contenido centrado */
-    padding: 0 30px;
+    /* Cambiamos el max-width a un porcentaje alto o lo quitamos */
+    max-width: 95%; 
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Esto empuja logo a la izq y links a la der */
     align-items: center;
 }
 
@@ -246,22 +247,22 @@ body {
     line-height: 1.8;
 }
 
-/* --- FOOTER (Extendido a las orillas) --- */
+/* --- FOOTER (Igualamos la extensión) --- */
 .main-footer {
-    width: 100%; 
+    width: 100%;
     background: #050608;
     border-top: 1px solid var(--border);
     padding: 60px 0 30px;
     margin-top: 80px;
     display: flex;
-    justify-content: center; /* Centra el contenido interno */
+    justify-content: center;
 }
 
 .footer-container {
     width: 100%;
-    max-width: 1000px; 
+    max-width: 95%; /* Para que el footer también use todo el ancho */
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .footer-grid {
