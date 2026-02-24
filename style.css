@@ -161,7 +161,7 @@ body {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alineación arriba */
+    justify-content: flex-start;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
     overflow: hidden;
@@ -174,9 +174,9 @@ body {
     background: #1c212b;
 }
 
-/* Contenedor de Logos en Tarjetas */
+/* Contenedor de Logos - Ajuste de Balance Óptico */
 .card-logo-container {
-    height: 100px;
+    height: 110px; /* Un poco más de aire */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,15 +184,29 @@ body {
 }
 
 .card-logo {
-    max-height: 85px;
     max-width: 100%;
     object-fit: contain;
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.05));
     transition: transform 0.4s ease;
 }
 
+/* Ajuste individual para Visas (más grande) */
+.logo-visas {
+    max-height: 100px; 
+    transform: scale(1.2); /* Lo agrandamos para que no se pierda */
+}
+
+/* Ajuste individual para Nivora (más controlado) */
+.logo-nivora {
+    max-height: 75px; 
+}
+
 .card:hover .card-logo {
-    transform: scale(1.1);
+    transform: scale(1.3); /* Efecto hover más dinámico para Visas */
+}
+
+.card:hover .logo-nivora {
+    transform: scale(1.1); /* Hover más suave para Nivora */
 }
 
 .card.featured { border-top: 4px solid var(--gold); }
@@ -216,7 +230,7 @@ body {
     font-size: 0.95rem;
     margin-bottom: 30px;
     font-weight: 300;
-    flex-grow: 1; /* Empuja el botón hacia abajo */
+    flex-grow: 1;
 }
 
 /* --- BOTONES --- */
